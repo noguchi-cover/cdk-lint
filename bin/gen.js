@@ -31,3 +31,25 @@ console.log('install eslint');
 
 console.log('install prettier');
 // execSync(`${installCommand} prettier`);
+
+const download = (uri, filename) => {
+  return new Promise((resolve, reject) =>
+    https
+      .request(uri, (res) => {
+        res
+          .pipe(createWriteStream(filename))
+          .on('close', resolve)
+          .on('error', reject);
+      })
+      .end()
+  );
+};
+
+download(
+  'https://raw.githubusercontent.com/noguchi-cover/cdk-lint/main/configs/.eslintrc',
+  '.eslintrc'
+);
+download(
+  'https://raw.githubusercontent.com/noguchi-cover/cdk-lint/main/configs/.prettierrc',
+  '.prettierrc'
+);
