@@ -38,7 +38,7 @@ const download = (uri, filename) => {
     https
       .request(uri, (res) => {
         res
-          .pipe(createWriteStream(filename))
+          .pipe(fs.createWriteStream(filename))
           .on('close', resolve)
           .on('error', reject);
       })
