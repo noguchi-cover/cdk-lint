@@ -26,12 +26,12 @@ console.log(`set up lint tools with ${pm}...`);
 
 const installCommand = isYarn ? 'yarn add --dev' : 'npm i --save-dev';
 console.log('install eslint');
-// execSync(
-//   `${installCommand} eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
-// );
+execSync(
+  `${installCommand} eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
+);
 
 console.log('install prettier');
-// execSync(`${installCommand} prettier`);
+execSync(`${installCommand} prettier`);
 
 const download = (uri, filename) => {
   return new Promise((resolve, reject) =>
