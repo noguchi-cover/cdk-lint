@@ -1,5 +1,22 @@
 {
-    "bin": {
-        "gen": "./bin/gen.js"
-      }
+  "name": "cdk-lint",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "cdk-lint": "bin/gen.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noguchi-cover/cdk-lint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noguchi-cover/cdk-lint/issues"
+  },
+  "homepage": "https://github.com/noguchi-cover/cdk-lint#readme"
 }
