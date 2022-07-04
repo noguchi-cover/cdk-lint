@@ -27,7 +27,7 @@ console.log(`set up lint tools with ${pm}...`);
 const installCommand = isYarn ? 'yarn add --dev' : 'npm i --save-dev';
 console.log('install eslint');
 execSync(
-  `${installCommand} eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
+  `${installCommand} eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-prettier@latest`
 );
 
 console.log('install prettier');
